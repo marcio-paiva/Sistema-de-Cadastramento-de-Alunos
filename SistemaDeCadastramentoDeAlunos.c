@@ -42,10 +42,10 @@ int main() {
     do{
     printf("Escolha uma das opcoes:\n");
     printf("[1] cadastrar aluno\n");
-    printf("[2] pesquisar aluno por matrícula\n");
+    printf("[2] pesquisar aluno por matricula\n");
     printf("[3] pesquisar aluno por nome\n");
     printf("[4] exibir lista de alunos \n");
-    printf("[5] exibir relação alunos/disciplina \n");
+    printf("[5] exibir relacao alunos/disciplina \n");
     printf("[6] sair\n\n");
     
     scanf("%d", &opcao);
