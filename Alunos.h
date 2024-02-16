@@ -15,3 +15,7 @@ typedef struct alunos_est {
 } alunos;
 
 void CadastrarAlunos(alunos *aluno, int id);
+
+int BuscaMatricula(alunos *aluno, int QTD);
+
+int BuscaNome(alunos *aluno, int QTD);
