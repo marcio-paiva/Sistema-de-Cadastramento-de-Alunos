@@ -5,7 +5,7 @@ Este é um sistema simples de cadastramento de alunos desenvolvido em C. O siste
 
 ## FUNCIONALIDADES
 
-#### Cadastro de alunos com as seguintes informações:
+#### Cadastro e consulta de alunos com as seguintes informações:
 - Nome
 - Matrícula
 - Disciplinas cursadas
