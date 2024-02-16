@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 #define TAM 2
 #define MAX 4
@@ -18,20 +19,20 @@ typedef struct alunos_est {
     int quantidadeDisciplinas;
     disciplinas dados[MAX];
 
-} alunos;
+}alunos;
 
-bool IgualdadeDeStrings(char s1[], char s2[]){
-    int i=0;
+// bool IgualdadeDeStrings(char s1[], char s2[]){
+//     int i=0;
     
-    while(s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0'){
-        i++;
-    }
-    if(s1[i] == '\0' && s2[i] == '\0'){
-        return 1;
-    }else{
-        return 0;
-    }
-}
+//     while(s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0'){
+//         i++;
+//     }
+//     if(s1[i] == '\0' && s2[i] == '\0'){
+//         return 1;
+//     }else{
+//         return 0;
+//     }
+// }
 
 int main() {
     alunos prog[TAM];
@@ -50,6 +51,7 @@ int main() {
     
     scanf("%d", &opcao);
     getchar();
+    
     
     switch(opcao){
         case 1:
@@ -92,7 +94,8 @@ int main() {
                     scanf("%f", &dados[j].frequencia);
                     getchar();
                 }
-            }
+                i++;
+           }
             printf("\n");
             break;
             
@@ -103,7 +106,7 @@ int main() {
             int encontrou = 0;
             
             for(int i=0; i<TAM; i++){
-                if(IgualdadeDeStrings(pesquisarMatricula, prog[i].matricula)){
+                if(strcmp(pesquisarMatricula, prog[i].matricula)){
                     printf("\nNome: %s", prog[i].nome);
                     printf("\nDisciplinas: \n");
                     for(int j=0; j<prog[i].quantidadeDisciplinas; j++){
@@ -131,7 +134,7 @@ int main() {
             encontrou = 0;
             
             for(int i=0; i<TAM; i++){
-                if(IgualdadeDeStrings(pesquisarNome, prog[i].nome)){
+                if(strcmp(pesquisarNome, prog[i].nome)){
                     printf("\nNome: %s", prog[i].nome);
                     printf("\nMatricula: %s", prog[i].matricula);
                     printf("\nDisciplinas: \n");
